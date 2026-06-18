@@ -253,7 +253,7 @@ private class AiPage(inflater: LayoutInflater, container: ViewGroup, private val
             explanation == null -> showPrompt()
             explanation.isEmpty() -> showLoading()
             else -> showExplanation(explanation, settings)
-        }
+        
         }
     }
 
