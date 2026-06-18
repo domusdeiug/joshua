@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/verse_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/padding_big"
+            android:contentDescription="@string/action_search"
+            android:src="@drawable/ic_search"
+            app:backgroundTint="@color/primary"
+            app:layout_behavior="me.xizzhu.android.joshua.reading.search.FloatingActionButtonScrollAwareBehavior" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/toolbar_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="me.xizzhu.android.joshua.reading.toolbar.ReadingToolbarFragment"
+                app:layout_scrollFlags="scroll|enterAlways" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <me.xizzhu.android.joshua.reading.detail.VerseDetailViewLayout
+            android:id="@+id/verse_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/chapter_selection_fragment"
+        android:layout_width="@dimen/chapter_selection_view_width"
+        android:layout_height="match_parent"
+        android:name="me.xizzhu.android.joshua.reading.chapter.ChapterSelectionFragment"
+        android:layout_gravity="start" />
+</androidx.drawerlayout.widget.DrawerLayout>

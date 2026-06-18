@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@null"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search_include_old_testament"
+        android:checkable="true"
+        android:title="@string/action_search_include_old_testament"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search_include_new_testament"
+        android:checkable="true"
+        android:title="@string/action_search_include_new_testament"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search_include_bookmarks"
+        android:checkable="true"
+        android:title="@string/action_search_include_bookmarks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search_include_highlights"
+        android:checkable="true"
+        android:title="@string/action_search_include_highlights"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search_include_notes"
+        android:checkable="true"
+        android:title="@string/action_search_include_notes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_clear_search_history"
+        android:title="@string/action_clear_search_history"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_small">
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingSectionHeader
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingSectionHeaderTitle="@string/settings_header_display" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/font_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_font_size" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/keep_screen_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_height"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="@string/settings_title_keep_screen_on" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/night_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_night_mode" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingSectionHeader
+                android:id="@+id/reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingSectionHeaderTitle="@string/settings_header_reading" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/simple_reading_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_height"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="@string/settings_title_simple_reading" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/hide_search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_height"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="@string/settings_title_hide_search_button" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/consolidated_sharing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/item_height"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="@string/settings_title_consolidated_sharing" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/default_highlight_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_default_highlight_color" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingSectionHeader
+                android:id="@+id/backup_restore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingSectionHeaderTitle="@string/settings_header_backup_restore" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_backup" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/restore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_restore" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingSectionHeader
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingSectionHeaderTitle="@string/settings_header_about" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_rate" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_website" />
+
+            <me.xizzhu.android.joshua.settings.widgets.SettingButton
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingButtonTitle="@string/settings_title_version" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/title_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
