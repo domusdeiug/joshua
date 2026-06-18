@@ -248,10 +248,12 @@ private class AiPage(inflater: LayoutInflater, container: ViewGroup, private val
     }
 
     override fun bind(verseDetail: VerseDetailViewData, settings: Settings) {
+        val explanation = verseDetail.aiExplanation
         when {
-            verseDetail.aiExplanation == null -> showPrompt()   // not yet requested
-            verseDetail.aiExplanation.isEmpty() -> showLoading() // request in flight
-            else -> showExplanation(verseDetail.aiExplanation!!, settings)
+            explanation == null -> showPrompt()
+            explanation.isEmpty() -> showLoading()
+            else -> showExplanation(explanation, settings)
+        }
         }
     }
 
